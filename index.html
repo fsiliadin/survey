@@ -1,0 +1,208 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<script type="text/javascript" src="dependencies/focus.js"></script>
+		<link rel="stylesheet" type="text/css" href="dependencies/focus.css">
+	</head>
+	<body>
+		<div id='pageFrontBanner'>
+			<p> Club Finder </p>
+			<p> Club data collection form </p>
+		</div>
+		<p> * (champs obligatoires) </p>
+		<div id= 'formBody'>
+			<div class= 'question'>
+				<span> nom * </span>
+				<span><input type="text" id="clubNameInput"></span>
+			</div>
+			<div class= 'question'>
+				<span> genre musical * </span>
+				<span>
+					<form id="atmosphereSelect">
+						<select name = "genre musical" multiple>
+							<option value = "HIP-HOP"> Hip hop </option>
+							<option value = "HOUSE"> House </option>
+							<option value = "LATINO"> Latino </option>
+							<option value = "ELECTRO"> Electro </option>
+							<option value = "SOUL"> Soul </option>
+							<option value = "TRAP"> Trap </option>
+						</select>
+					</form>
+				</span>
+			</div>
+			<div class= 'question'>
+				<span> autres genres </span>
+				<span>
+					<input type="text" id="clubOtherAtmosphereInput">
+					<div id= "otherAtmosphere"></div>
+				</span>
+			</div>
+			<div class= 'question'>
+				<span> Quartier </span>
+				<span><input type="text" id="clubDistrictInput"></span>
+			</div>
+			<div class= 'question'>
+				<span> Entrée gratuite ? * </span>
+				<span>
+					<form>
+						<input type="radio" id="entreeGratuite" value="yes">
+						<label for="entreeGratuite">Oui</label>
+
+						<input type="radio" id="entreePayante" value="no">
+						<label for="entreePayante">Non</label>
+					</form>
+				</span>
+			</div>
+			<div class= 'question'>
+				<span> Prix d'entrée * </span>
+				<span><input type="number" id="clubAdmissionPriceInput"></span>
+			</div>
+			<div class= 'question'>
+				<span> Tarifs particuliers </span>
+				<span>
+					<textarea id = "tarifParticulier" name="tarifParticulier" rows="10" cols="50">
+					  N'hesitez pas à mettre un max de détail :)
+					</textarea>
+				</span>
+			</div>
+			<div class= 'question'>
+				<span> Conso avec l'entrée ? * </span>
+				<span>
+					<form>
+						<input type="radio" id="consoOfferte" value="yes">
+						<label for="consoOfferte">Oui</label>
+
+						<input type="radio" id="consoNonOfferte" value="no">
+						<label for="consoNonOfferte">Non</label>
+					</form>
+				</span>
+			</div>
+			<div class= 'question'>
+				<span> Prix des consos hard (shots exclus) * </span>
+				<span><input type="number" id="hardDrinkPrice"></span>
+			</div>
+			<div class= 'question'>
+				<span> Prix des shots * </span>
+				<span><input type="number" id="shotPrice"></span>
+			</div>
+			<div class= 'question'>
+				<span> On y vend de la biere? * </span>
+				<span>
+					<form>
+						<input type="radio" id="Beer" value="yes">
+						<label for="Beer">Oui</label>
+
+						<input type="radio" id="noBeer" value="no">
+						<label for="noBeer">Non</label>
+					</form>
+				</span>
+			</div>
+			<div class= 'question'>
+				<span> Prix de la bière * </span>
+				<span><input type="number" id="beerPrice"></span>
+			</div>
+			<div class= 'question'>
+				<span> Y a t il un vestiaire ? * </span>
+				<span>
+					<form>
+						<input type="radio" id="cloackRoom" value="yes">
+						<label for="cloackRoom">Oui</label>
+
+						<input type="radio" id="noCloackRoom" value="no">
+						<label for="noCloackRoom">Non</label>
+					</form>
+				</span>
+			</div>			
+			<div class= 'question'>
+				<span> Prix du vestiaire (par article) * </span>
+				<span><input type="number" id="cloackRoomPrice"></span>
+			</div>
+			<div class= 'question'>
+				<span> Fréquentation (étudiants, bobos, etc..) * </span>
+				<span><input type="text" id="frequentationInput"></span>
+			</div>
+			<div class= 'question'>
+				<span> dress code * </span>
+				<span><input type="text" id="dressCodeInput"></span>
+			</div>
+			<div class= 'question'>
+				<span> moyenne d'âge * </span>
+				<span><input type="number" id="averageAgeInput"></span>
+			</div>
+			<div class= 'question'>
+				<span> jour de la visite * </span>
+				<span>
+					<form id="visiteDay">
+						<select name = "jour de visite">
+							<option value = "jeudi"> jeudi </option>
+							<option value = "vendredi"> vendredi </option>
+							<option value = "samedi"> samedi </option>
+							<option value = "dimanche"> dimanche </option>
+							<option value = "lundi"> lundi </option>
+							<option value = "mardi"> mardi </option>
+							<option value = "mercredi"> mercredi </option>
+						</select>
+					</form>
+				</span>
+			</div>
+			<div class= 'question'>
+				<span> densité * </span>
+				<span>
+					<form>
+						<input type="radio" id="faible" value="faible">
+						<label for="faible">faible</label>
+						<input type="radio" id="moyen" value="moyen">
+						<label for="moyen">moyen</label>
+						<input type="radio" id="forte" value="forte">
+						<label for="forte">forte</label>
+					</form>
+				</span>
+			</div>
+			<div class= 'question'>
+				<span> pourcentage de femmes * </span>
+				<span id="femalePercentage"> 
+					<script>
+						new Slider ('#femalePercentage', {
+					        id: 'nbOfPerson',
+					        min: 0,
+					        max: 100,
+					        value: 50
+					    })
+					</script>
+				</span>
+			</div>
+			<div class= 'question'>
+				<span> spécificités du lieu (sur une péniche, belle vue sur la Tour Eiffel etc..) </span>
+				<span>
+					<textarea id = "clubSpecificities" name="clubSpecificities" rows="10" cols="50">
+					  N'hesitez pas à mettre un max de détail :)
+					</textarea>
+				</span>
+			</div>
+			<div class= 'question'>
+				<span> petite description </span>
+				<span>
+					<textarea id = "description" name="description" rows="10" cols="50">
+					  N'hesitez pas à mettre un max de détail :)
+					</textarea>
+				</span>
+			</div>
+			<div class= 'question'>
+				<span> note du dj * </span>
+				<span id= "djRate">
+					<script>
+						djRate = new RateSlider('#djRate', {
+					        maxRate: 10,
+					        pattern: "&#9733"
+					    })
+					</script> 
+				</span>
+			</div>
+			<div class= 'question'>
+				<span> nom * </span>
+				<span><input type="text" id="clubNameInput"></span>
+			</div>
+		</div>
+	</body>
+</html>
