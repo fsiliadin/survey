@@ -1,17 +1,17 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<meta charset="utf-8">
+		<meta charset = 'UTF-8' name="viewport" content="width=device-width, initial-scale=1.0">
 		<script type="text/javascript" src="dependencies/focus.js"></script>
 		<link rel="stylesheet" type="text/css" href="dependencies/focus.css">
+		<link rel="stylesheet" type="text/css" href="survey.css">
 	</head>
 	<body>
 		<div id='pageFrontBanner'>
-			<p> Club Finder </p>
-			<p> Club data collection form </p>
+			<p> Club Finder data collection form</p>
 		</div>
-		<p> * (champs obligatoires) </p>
 		<div id= 'formBody'>
+			<p id= 'starSpan'> * (champs obligatoires) </p>
 			<div class= 'question'>
 				<span> nom * </span>
 				<span><input type="text" id="clubNameInput"></span>
@@ -168,7 +168,7 @@
 					        min: 0,
 					        max: 100,
 					        value: 50
-					    })
+					    });
 					</script>
 				</span>
 			</div>
