@@ -13,11 +13,11 @@
 		<div id= 'formBody'>
 			<p id= 'starSpan'> * (champs obligatoires) </p>
 			<div class= 'question'>
-				<span> nom * </span>
+				<span> nom * :</span>
 				<span><input type="text" id="clubNameInput"></span>
 			</div>
 			<div class= 'question'>
-				<span> genre musical * </span>
+				<span> genre musical * :</span>
 				<span>
 					<form id="atmosphereSelect">
 						<select name = "genre musical" multiple>
@@ -32,18 +32,18 @@
 				</span>
 			</div>
 			<div class= 'question'>
-				<span> autres genres </span>
+				<span> autres genres :</span>
 				<span>
 					<input type="text" id="clubOtherAtmosphereInput">
 					<div id= "otherAtmosphere"></div>
 				</span>
 			</div>
 			<div class= 'question'>
-				<span> Quartier </span>
+				<span> Quartier :</span>
 				<span><input type="text" id="clubDistrictInput"></span>
 			</div>
 			<div class= 'question'>
-				<span> Entrée gratuite ? * </span>
+				<span> Entrée gratuite ? * :</span>
 				<span>
 					<form>
 						<input type="radio" id="entreeGratuite" value="yes">
@@ -55,19 +55,19 @@
 				</span>
 			</div>
 			<div class= 'question'>
-				<span> Prix d'entrée * </span>
+				<span> Prix d'entrée * :</span>
 				<span><input type="number" id="clubAdmissionPriceInput"></span>
 			</div>
 			<div class= 'question'>
-				<span> Tarifs particuliers </span>
+				<span> Tarifs particuliers :</span>
 				<span>
-					<textarea id = "tarifParticulier" name="tarifParticulier" rows="10" cols="50">
+					<textarea id = "tarifParticulier" name="tarifParticulier">
 					  N'hesitez pas à mettre un max de détail :)
 					</textarea>
 				</span>
 			</div>
 			<div class= 'question'>
-				<span> Conso avec l'entrée ? * </span>
+				<span> Conso avec l'entrée ? * :</span>
 				<span>
 					<form>
 						<input type="radio" id="consoOfferte" value="yes">
@@ -79,15 +79,15 @@
 				</span>
 			</div>
 			<div class= 'question'>
-				<span> Prix des consos hard (shots exclus) * </span>
+				<span> Prix des consos hard (shots exclus) * :</span>
 				<span><input type="number" id="hardDrinkPrice"></span>
 			</div>
 			<div class= 'question'>
-				<span> Prix des shots * </span>
+				<span> Prix des shots * :</span>
 				<span><input type="number" id="shotPrice"></span>
 			</div>
 			<div class= 'question'>
-				<span> On y vend de la biere? * </span>
+				<span> On y vend de la biere? * :</span>
 				<span>
 					<form>
 						<input type="radio" id="Beer" value="yes">
@@ -99,11 +99,11 @@
 				</span>
 			</div>
 			<div class= 'question'>
-				<span> Prix de la bière * </span>
+				<span> Prix de la bière * :</span>
 				<span><input type="number" id="beerPrice"></span>
 			</div>
 			<div class= 'question'>
-				<span> Y a t il un vestiaire ? * </span>
+				<span> Y a t il un vestiaire ? * :</span>
 				<span>
 					<form>
 						<input type="radio" id="cloackRoom" value="yes">
@@ -115,23 +115,23 @@
 				</span>
 			</div>			
 			<div class= 'question'>
-				<span> Prix du vestiaire (par article) * </span>
+				<span> Prix du vestiaire (par article) * :</span>
 				<span><input type="number" id="cloackRoomPrice"></span>
 			</div>
 			<div class= 'question'>
-				<span> Fréquentation (étudiants, bobos, etc..) * </span>
+				<span> Fréquentation (étudiants, bobos, etc..) * :</span>
 				<span><input type="text" id="frequentationInput"></span>
 			</div>
 			<div class= 'question'>
-				<span> dress code * </span>
+				<span> dress code * :</span>
 				<span><input type="text" id="dressCodeInput"></span>
 			</div>
 			<div class= 'question'>
-				<span> moyenne d'âge * </span>
+				<span> moyenne d'âge * :</span>
 				<span><input type="number" id="averageAgeInput"></span>
 			</div>
 			<div class= 'question'>
-				<span> jour de la visite * </span>
+				<span> jour de la visite * :</span>
 				<span>
 					<form id="visiteDay">
 						<select name = "jour de visite">
@@ -147,7 +147,7 @@
 				</span>
 			</div>
 			<div class= 'question'>
-				<span> densité * </span>
+				<span> densité * :</span>
 				<span>
 					<form>
 						<input type="radio" id="faible" value="faible">
@@ -160,7 +160,7 @@
 				</span>
 			</div>
 			<div class= 'question'>
-				<span> pourcentage de femmes * </span>
+				<span> pourcentage de femmes * :</span>
 				<span id="femalePercentage"> 
 					<script>
 						new Slider ('#femalePercentage', {
@@ -173,23 +173,23 @@
 				</span>
 			</div>
 			<div class= 'question'>
-				<span> spécificités du lieu (sur une péniche, belle vue sur la Tour Eiffel etc..) </span>
+				<span> spécificités du lieu (sur une péniche, belle vue sur la Tour Eiffel etc..): </span>
 				<span>
-					<textarea id = "clubSpecificities" name="clubSpecificities" rows="10" cols="50">
+					<textarea id = "clubSpecificities" name="clubSpecificities">
 					  N'hesitez pas à mettre un max de détail :)
 					</textarea>
 				</span>
 			</div>
 			<div class= 'question'>
-				<span> petite description </span>
+				<span> petite description: </span>
 				<span>
-					<textarea id = "description" name="description" rows="10" cols="50">
+					<textarea id = "description" name="description">
 					  N'hesitez pas à mettre un max de détail :)
 					</textarea>
 				</span>
 			</div>
 			<div class= 'question'>
-				<span> note du dj * </span>
+				<span> note du dj * :</span>
 				<span id= "djRate">
 					<script>
 						djRate = new RateSlider('#djRate', {
