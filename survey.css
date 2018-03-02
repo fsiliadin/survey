@@ -12,8 +12,11 @@
 	font-family: 'Courgette', cursive;
 	font-size: large;
     font-weight: bold;
+    z-index: 1000;
 }
-
+#pageFrontBanner p {
+	margin-left: 1em;
+}
 #formBody {
 	font-family: 'Hind Siliguri', sans-serif;
 	color: #787878;
@@ -51,9 +54,27 @@
 	margin-right: auto;
 	font-style: italic;
 }
+
 .basic_slider .mainSlideZone {
     background: linear-gradient(to left, #7fd648a6, #f6f6f6);
 }
 .basic_rateSlider .rateItem {
     font-size: x-large;
+}
+div[data-role=page]{
+	background-color: white
+}
+.ui-page-theme-a .ui-radio-on:after, html .ui-bar-a .ui-radio-on:after, html .ui-body-a .ui-radio-on:after, html body .ui-group-theme-a .ui-radio-on:after, .ui-btn.ui-radio-on.ui-btn-a:after {
+    
+    border-color: #7fd648 !important;
+}
+.ui-focus{
+	box-shadow: none !important;
+}
+
+#submit {
+	box-shadow: none;
+	border-radius: none;
+	color: white;
+	background-color: #7fd648;
 }

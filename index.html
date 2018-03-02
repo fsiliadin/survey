@@ -7,10 +7,13 @@
 		<link rel="stylesheet" type="text/css" href="survey.css">
 		<link href="https://fonts.googleapis.com/css?family=Hind+Siliguri" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Courgette|Hind+Siliguri:600" rel="stylesheet">
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 	</head>
 	<body>
 		<div id='pageFrontBanner'>
-			<p>  Club Finder - Night Club Form</p>
+			<p>  Club Finder - Night Club Form </p>
 		</div>
 		<div id= 'formBody'>
 			<p id= 'starSpan'> * (champs obligatoires) </p>
@@ -22,7 +25,8 @@
 				<span> genre musical * :</span>
 				<span>
 					<form id="atmosphereSelect">
-						<select name = "genre musical" multiple>
+						<select name = "genre musical">
+							<option value = "HIP-HOP"> Sélectionner </option>
 							<option value = "HIP-HOP"> Hip hop </option>
 							<option value = "HOUSE"> House </option>
 							<option value = "LATINO"> Latino </option>
@@ -202,9 +206,8 @@
 					</script> 
 				</span>
 			</div>
-			<div class= 'question'>
-				<button type="submit">Envoyer</button>
-			</div>
 		</div>
+
+		<button id="submit" type="submit">Envoyer</button>
 	</body>
 </html>
