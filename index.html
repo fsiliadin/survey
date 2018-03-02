@@ -48,10 +48,10 @@
 				<span> Entrée gratuite ? * :</span>
 				<span>
 					<form>
-						<input type="radio" id="entreeGratuite" value="yes">
+						<input type="radio" id="entreeGratuite" value="yes" name="freeEntrance">
 						<label for="entreeGratuite">Oui</label>
 
-						<input type="radio" id="entreePayante" value="no">
+						<input type="radio" id="entreePayante" value="no" name="freeEntrance">
 						<label for="entreePayante">Non</label>
 					</form>
 				</span>
@@ -72,10 +72,10 @@
 				<span> Conso avec l'entrée ? * :</span>
 				<span>
 					<form>
-						<input type="radio" id="consoOfferte" value="yes">
+						<input type="radio" id="consoOfferte" value="yes" name="freeDrinks">
 						<label for="consoOfferte">Oui</label>
 
-						<input type="radio" id="consoNonOfferte" value="no">
+						<input type="radio" id="consoNonOfferte" value="no" name="freeDrinks">
 						<label for="consoNonOfferte">Non</label>
 					</form>
 				</span>
@@ -92,10 +92,10 @@
 				<span> On y vend de la biere? * :</span>
 				<span>
 					<form>
-						<input type="radio" id="Beer" value="yes">
+						<input type="radio" id="Beer" value="yes" name="sellingBeer">
 						<label for="Beer">Oui</label>
 
-						<input type="radio" id="noBeer" value="no">
+						<input type="radio" id="noBeer" value="no" name="sellingBeer">
 						<label for="noBeer">Non</label>
 					</form>
 				</span>
@@ -108,10 +108,10 @@
 				<span> Y a t il un vestiaire ? * :</span>
 				<span>
 					<form>
-						<input type="radio" id="cloackRoom" value="yes">
+						<input type="radio" id="cloackRoom" value="yes" name="cloackroom">
 						<label for="cloackRoom">Oui</label>
 
-						<input type="radio" id="noCloackRoom" value="no">
+						<input type="radio" id="noCloackRoom" value="no" name="cloackroom">
 						<label for="noCloackRoom">Non</label>
 					</form>
 				</span>
@@ -152,11 +152,11 @@
 				<span> densité * :</span>
 				<span>
 					<form>
-						<input type="radio" id="faible" value="faible">
+						<input type="radio" id="faible" value="faible" name="density">
 						<label for="faible">faible</label>
-						<input type="radio" id="moyen" value="moyen">
+						<input type="radio" id="moyen" value="moyen" name="density">
 						<label for="moyen">moyen</label>
-						<input type="radio" id="forte" value="forte">
+						<input type="radio" id="forte" value="forte" name="density">
 						<label for="forte">forte</label>
 					</form>
 				</span>
@@ -203,8 +203,7 @@
 				</span>
 			</div>
 			<div class= 'question'>
-				<span> nom * </span>
-				<span><input type="text" id="clubNameInput"></span>
+				<button type="submit">Envoyer</button>
 			</div>
 		</div>
 	</body>
