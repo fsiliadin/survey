@@ -8,8 +8,9 @@
 		<link href="https://fonts.googleapis.com/css?family=Hind+Siliguri" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Courgette|Hind+Siliguri:600" rel="stylesheet">
 		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
-<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 	</head>
 	<body>
 		<div id='pageFrontBanner'>
@@ -207,7 +208,10 @@
 				</span>
 			</div>
 		</div>
-
-		<button id="submit" type="submit">Envoyer</button>
+		<form action="?" method="POST">
+	      <div class="g-recaptcha" data-sitekey="6LflIEoUAAAAADah8JRDXDuDXqLMKemVr_tsHWy-"></div>
+	      <br/>
+	      <button id="submit" type="submit">Envoyer</button>
+	    </form>
 	</body>
 </html>
