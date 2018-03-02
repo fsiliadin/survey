@@ -9,10 +9,14 @@
 	top: 0px;
 	background-color: #7fd648;
     color: white;
+	font-family: 'Courgette', cursive;
+	font-size: large;
     font-weight: bold;
 }
 
 #formBody {
+	font-family: 'Hind Siliguri', sans-serif;
+	color: #787878;
 	padding: 1em;
 	display: flex;
 	flex-direction: column;
@@ -34,6 +38,7 @@
 	display: flex;
 	flex-direction: line;
 	justify-content: space-between;
+	font-size: large;
 }
 #nbOfPerson{
 	min-width: 200px;
@@ -44,4 +49,11 @@
 #starSpan {
 	margin-left: auto;
 	margin-right: auto;
+	font-style: italic;
+}
+.basic_slider .mainSlideZone {
+    background: linear-gradient(to left, #7fd648a6, #f6f6f6);
+}
+.basic_rateSlider .rateItem {
+    font-size: x-large;
 }
