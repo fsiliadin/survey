@@ -17,11 +17,11 @@
 		</div>
 		<div id= 'formBody'>
 			<p id= 'starSpan'> * (champs obligatoires) </p>
-			<div class= 'question'>
+			<div class= 'question' data-mandatory = 'true'>
 				<span> nom * :</span>
 				<span><input type="text" id="clubNameInput"></span>
 			</div>
-			<div class= 'question'>
+			<div class= 'question' data-mandatory = 'true'>
 				<span> genre musical * :</span>
 				<span>
 					<form id="atmosphereSelect">
@@ -48,7 +48,7 @@
 				<span> Quartier :</span>
 				<span><input type="text" id="clubDistrictInput"></span>
 			</div>
-			<div class= 'question'>
+			<div class= 'question'  data-mandatory = 'true'>
 				<span> Entrée gratuite ? * :</span>
 				<span>
 					<form>
@@ -61,7 +61,7 @@
 				</span>
 			</div>
 			<div class= 'question'>
-				<span> Prix d'entrée * :</span>
+				<span> Prix d'entrée :</span>
 				<span><input type="number" id="clubAdmissionPriceInput"></span>
 			</div>
 			<div class= 'question'>
@@ -72,7 +72,7 @@
 					</textarea>
 				</span>
 			</div>
-			<div class= 'question'>
+			<div class= 'question' data-mandatory = 'true'>
 				<span> Conso avec l'entrée ? * :</span>
 				<span>
 					<form>
@@ -85,15 +85,15 @@
 				</span>
 			</div>
 			<div class= 'question'>
-				<span> Prix des consos hard (shots exclus) * :</span>
+				<span> Prix des consos hard (shots exclus) :</span>
 				<span><input type="number" id="hardDrinkPrice"></span>
 			</div>
 			<div class= 'question'>
-				<span> Prix des shots * :</span>
+				<span> Prix des shots :</span>
 				<span><input type="number" id="shotPrice"></span>
 			</div>
 			<div class= 'question'>
-				<span> On y vend de la biere? * :</span>
+				<span> On y vend de la biere? :</span>
 				<span>
 					<form>
 						<input type="radio" id="Beer" value="yes" name="sellingBeer">
@@ -105,10 +105,10 @@
 				</span>
 			</div>
 			<div class= 'question'>
-				<span> Prix de la bière * :</span>
+				<span> Prix de la bière :</span>
 				<span><input type="number" id="beerPrice"></span>
 			</div>
-			<div class= 'question'>
+			<div class= 'question' data-mandatory = 'true'>
 				<span> Y a t il un vestiaire ? * :</span>
 				<span>
 					<form>
@@ -121,22 +121,22 @@
 				</span>
 			</div>			
 			<div class= 'question'>
-				<span> Prix du vestiaire (par article) * :</span>
+				<span> Prix du vestiaire (par article) :</span>
 				<span><input type="number" id="cloackRoomPrice"></span>
 			</div>
-			<div class= 'question'>
+			<div class= 'question' data-mandatory = 'true'>
 				<span> Fréquentation (étudiants, bobos, etc..) * :</span>
 				<span><input type="text" id="frequentationInput"></span>
 			</div>
-			<div class= 'question'>
+			<div class= 'question' data-mandatory = 'true'>
 				<span> dress code * :</span>
 				<span><input type="text" id="dressCodeInput"></span>
 			</div>
-			<div class= 'question'>
+			<div class= 'question' data-mandatory = 'true'>
 				<span> moyenne d'âge * :</span>
 				<span><input type="number" id="averageAgeInput"></span>
 			</div>
-			<div class= 'question'>
+			<div class= 'question' data-mandatory = 'true'>
 				<span> jour de la visite * :</span>
 				<span>
 					<form id="visiteDay">
@@ -152,7 +152,7 @@
 					</form>
 				</span>
 			</div>
-			<div class= 'question'>
+			<div class= 'question' data-mandatory = 'true'>
 				<span> densité * :</span>
 				<span>
 					<form>
@@ -166,7 +166,7 @@
 				</span>
 			</div>
 			<div class= 'question'>
-				<span> pourcentage de femmes * :</span>
+				<span> pourcentage de femmes :</span>
 				<span id="femalePercentage"> 
 					<script>
 						new Slider ('#femalePercentage', {
@@ -194,7 +194,7 @@
 					</textarea>
 				</span>
 			</div>
-			<div class= 'question'>
+			<div class= 'question' data-mandatory = 'true'>
 				<span> note du dj * :</span>
 				<span id= "djRate">
 					<script>
