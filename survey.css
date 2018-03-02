@@ -7,7 +7,9 @@
 	display: flex;
 	width: 100%;
 	top: 0px;
-	background-color: white;
+	background-color: #7fd648;
+    color: white;
+    font-weight: bold;
 }
 
 #formBody {
@@ -26,11 +28,18 @@
 }
 
 .question:nth-child(2n+1){
-	background-color: #edece6;
+	background-color: #f7f7f7;
+}
+.question {
+	display: flex;
+	flex-direction: line;
+	justify-content: space-between;
+}
+#nbOfPerson{
+	min-width: 200px;
 }
 #formBody .question {
-	padding-top: 1em;
-	padding-bottom: 1em;
+	padding: 1em 10% 1em 10%;
 }
 #starSpan {
 	margin-left: auto;
