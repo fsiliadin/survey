@@ -11,6 +11,7 @@
 		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    	<script src="checkMandatoryQuestions.js"></script>
 	</head>
 	<body>
 		<div id='pageFrontBanner'>
@@ -18,14 +19,14 @@
 		</div>
 		<div id= 'formBody'>
 			<p id= 'starSpan'> * (champs obligatoires) </p>
-			<div class= 'question' data-mandatory = 'true'>
+			<div class= 'question'>
 				<span> nom * :</span>
-				<span><input type="text" id="clubNameInput"></span>
+				<span><input type="text" id="clubNameInput" data-mandatory = 'true'></span>
 			</div>
-			<div class= 'question' data-mandatory = 'true'>
+			<div class= 'question'>
 				<span> genre musical * :</span>
 				<span>
-					<form id="atmosphereSelect">
+					<form id="atmosphereSelect" data-mandatory = 'true'>
 						<select name = "genre musical">
 							<option value = "HIP-HOP"> Sélectionner </option>
 							<option value = "HIP-HOP"> Hip hop </option>
@@ -49,10 +50,10 @@
 				<span> Quartier :</span>
 				<span><input type="text" id="clubDistrictInput"></span>
 			</div>
-			<div class= 'question'  data-mandatory = 'true'>
+			<div class= 'question'>
 				<span> Entrée gratuite ? * :</span>
 				<span>
-					<form>
+					<form data-mandatory = 'true'>
 						<input type="radio" id="entreeGratuite" value="yes" name="freeEntrance">
 						<label for="entreeGratuite">Oui</label>
 
@@ -73,10 +74,10 @@
 					</textarea>
 				</span>
 			</div>
-			<div class= 'question' data-mandatory = 'true'>
+			<div class= 'question'>
 				<span> Conso avec l'entrée ? * :</span>
 				<span>
-					<form>
+					<form  data-mandatory = 'true'>
 						<input type="radio" id="consoOfferte" value="yes" name="freeDrinks">
 						<label for="consoOfferte">Oui</label>
 
@@ -109,10 +110,10 @@
 				<span> Prix de la bière :</span>
 				<span><input type="number" id="beerPrice"></span>
 			</div>
-			<div class= 'question' data-mandatory = 'true'>
+			<div class= 'question'>
 				<span> Y a t il un vestiaire ? * :</span>
 				<span>
-					<form>
+					<form data-mandatory = 'true'>
 						<input type="radio" id="cloackRoom" value="yes" name="cloackroom">
 						<label for="cloackRoom">Oui</label>
 
@@ -125,22 +126,22 @@
 				<span> Prix du vestiaire (par article) :</span>
 				<span><input type="number" id="cloackRoomPrice"></span>
 			</div>
-			<div class= 'question' data-mandatory = 'true'>
+			<div class= 'question'>
 				<span> Fréquentation (étudiants, bobos, etc..) * :</span>
-				<span><input type="text" id="frequentationInput"></span>
+				<span><input type="text" id="frequentationInput" data-mandatory = 'true'></span>
 			</div>
-			<div class= 'question' data-mandatory = 'true'>
+			<div class= 'question'>
 				<span> dress code * :</span>
-				<span><input type="text" id="dressCodeInput"></span>
+				<span><input type="text" id="dressCodeInput" data-mandatory = 'true'></span>
 			</div>
-			<div class= 'question' data-mandatory = 'true'>
+			<div class= 'question'>
 				<span> moyenne d'âge * :</span>
-				<span><input type="number" id="averageAgeInput"></span>
+				<span><input type="number" id="averageAgeInput" data-mandatory = 'true'></span>
 			</div>
-			<div class= 'question' data-mandatory = 'true'>
+			<div class= 'question'>
 				<span> jour de la visite * :</span>
 				<span>
-					<form id="visiteDay">
+					<form id="visiteDay" data-mandatory = 'true'>
 						<select name = "jour de visite">
 							<option value = "jeudi"> jeudi </option>
 							<option value = "vendredi"> vendredi </option>
@@ -153,10 +154,10 @@
 					</form>
 				</span>
 			</div>
-			<div class= 'question' data-mandatory = 'true'>
+			<div class= 'question'>
 				<span> densité * :</span>
 				<span>
-					<form>
+					<form data-mandatory = 'true'>
 						<input type="radio" id="faible" value="faible" name="density">
 						<label for="faible">faible</label>
 						<input type="radio" id="moyen" value="moyen" name="density">
@@ -195,7 +196,7 @@
 					</textarea>
 				</span>
 			</div>
-			<div class= 'question' data-mandatory = 'true'>
+			<div class= 'question'>
 				<span> note du dj * :</span>
 				<span id= "djRate">
 					<script>
@@ -204,14 +205,16 @@
 					        pattern: "&#9733",
 					        activeColor: "#7fd648"
 					    })
+					    djRate.generated()[0].element.dataset.mandatory = 'true'
+					    console.log(djRate.generated());
 					</script> 
 				</span>
 			</div>
 		</div>
-		<form action="?" method="POST">
+		<!-- <form action="?" method="POST">
 	      <div class="g-recaptcha" data-sitekey="6LflIEoUAAAAADah8JRDXDuDXqLMKemVr_tsHWy-"></div>
-	      <br/>
-	      <button id="submit" type="submit">Envoyer</button>
-	    </form>
+	      <br/> -->
+	      <button id="submit">Envoyer</button>
+	    <!-- </form> -->
 	</body>
 </html>
