@@ -78,3 +78,15 @@ div[data-role=page]{
 	color: white;
 	background-color: #7fd648;
 }
+
+@media (max-width: 700px) {
+	.question span {
+		font-size: x-small !important;
+	}
+	.ui-checkbox .ui-btn, .ui-radio .ui-btn {
+		font-size: smaller;
+	}
+	.ui-btn.ui-checkbox-off:after, .ui-btn.ui-checkbox-on:after, .ui-btn.ui-radio-off:after, .ui-btn.ui-radio-on:after {
+	    margin: -9px 2px 0 -4px !important;
+	}
+}
