@@ -158,11 +158,11 @@
 			<div class= 'question'>
 				<span> densité * :</span>
 				<span>
-					<form data-mandatory = 'true'>
+					<form id = "densityRadio" data-mandatory = 'true'>
 						<input type="radio" id="faible" value="faible" name="density">
 						<label for="faible">faible</label>
-						<input type="radio" id="moyen" value="moyen" name="density">
-						<label for="moyen">moyen</label>
+						<input type="radio" id="moyenne" value="moyenne" name="density">
+						<label for="moyenne">moyen</label>
 						<input type="radio" id="forte" value="forte" name="density">
 						<label for="forte">forte</label>
 					</form>
@@ -172,7 +172,7 @@
 				<span> pourcentage de femmes :</span>
 				<span id="femalePercentage"> 
 					<script>
-						new Slider ('#femalePercentage', {
+						femalePercentage = new Slider ('#femalePercentage', {
 					        id: 'nbOfPerson',
 					        min: 0,
 					        max: 100,

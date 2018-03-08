@@ -43,20 +43,25 @@ function checkMandatoryQuestions() {
 		}
 	})
 
-	unanswered[0].scrollIntoView({behavior: "smooth", block: "center", inline: "nearest"});
-	document.querySelector('#pageFrontBanner p').innerHTML = 'Club Finder - Sombre!! vous n\'avez pas repondu à toutes les questions'
-	document.querySelector('#pageFrontBanner').style.backgroundColor = '#f4b942'
-	unanswered.forEach(function(item){
-		(function(element){
-			var parentEl = element.parentElement
-			if (parentEl.className.indexOf('question') !== -1) {
-				highlightQuestion(parentEl)
-			} else {
-				arguments.callee(parentEl)
-			}
-		})(item)
+	if (unanswered.length) {
+		unanswered[0].scrollIntoView({behavior: 'smooth', block: 'center', inline: 'nearest'});
+		document.querySelector('#pageFrontBanner p').innerHTML = 'Club Finder - Sombre!! vous n\'avez pas repondu à toutes les questions'
+		document.querySelector('#pageFrontBanner').style.backgroundColor = '#f4b942'
+		unanswered.forEach(function(item) {
+			(function(element){
+				var parentEl = element.parentElement
+				if (parentEl.className.indexOf('question') !== -1) {
+					highlightQuestion(parentEl)
+				} else {
+					arguments.callee(parentEl)
+				}
+			})(item)
 
-	})
+		})
+	} else {
+		createDataObject()
+	}
+	
 }
 
 function highlightQuestion (question) {
@@ -71,4 +76,41 @@ function clearHighlightedQuestions () {
 	})
 	document.querySelector('#pageFrontBanner p').innerHTML = 'Club Finder - Night Club Form'
 	document.querySelector('#pageFrontBanner').style.backgroundColor = '#7fd648'
+}
+
+function createDataObject () {
+	var clubData = {}
+	clubData.name = document.querySelector('#clubNameInput').value
+	clubData.atmospheres = [];
+	clubData.atmospheres.push(document.querySelector('#atmosphereSelect select').value)
+	clubData.atmospheres.concat(document.querySelector('#clubOtherAtmosphereInput').value.split(' '))
+	clubData.districts = document.querySelector('#clubDistrictInput').value.split()
+	clubData.freeAdmission = document.querySelector('#entreeGratuite').checked
+	clubData.admissionPrice = document.querySelector('#clubAdmissionPriceInput').value
+	clubData.specialTariffs = document.querySelector('#tarifParticulier').value
+	clubData.offeredDrink = document.querySelector('#consoOfferte').checked
+	clubData.detailedDrinkPrices = {
+		hard: document.querySelector('#hardDrinkPrice').value,
+		shots: document.querySelector('#shotPrice').value,
+		pinte: document.querySelector('#beerPrice').value
+	}
+	clubData.cloakroom = {
+		price: document.querySelector('#cloackRoomPrice').value
+	}
+	clubData.frequenting = document.querySelector('#frequentationInput').value.split(',')
+	clubData.dressCode = document.querySelector('#dressCodeInput').value.split(',')
+	clubData.averageAge = document.querySelector('#averageAgeInput').value
+	clubData.visitDay = document.querySelector('#visiteDay select').value
+	console.log('djfqkldsjf', Array.prototype.filter.call(document.querySelectorAll('#densityRadio input'), function(option) {
+		return option.checked
+	})[0])
+	clubData.density = Array.prototype.filter.call(document.querySelectorAll('#densityRadio input'), function(option) {
+		return option.checked
+	})[0].value
+	clubData.femalePercentage = femalePercentage.generated()[0].value
+	clubData.specificities = document.querySelector('#clubSpecificities').value
+	clubData.shortDescription = document.querySelector('#description').value
+	clubData.djRate = djRate.generated()[0].rate
+
+	console.log('club Data', clubData)
 }
