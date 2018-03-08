@@ -5,6 +5,7 @@ window.onload = function(){
 }
 
 function checkMandatoryQuestions() {
+	clearHighlightedQuestions()
 	responses = document.querySelectorAll('*[data-mandatory = "true"]')
 	var unanswered = [];
 	Array.prototype.forEach.call(responses, function(response) {
@@ -42,5 +43,32 @@ function checkMandatoryQuestions() {
 		}
 	})
 
-	console.log('unanswered', unanswered)
+	unanswered[0].scrollIntoView({behavior: "smooth", block: "center", inline: "nearest"});
+	document.querySelector('#pageFrontBanner p').innerHTML = 'Club Finder - Sombre!! vous n\'avez pas repondu à toutes les questions'
+	document.querySelector('#pageFrontBanner').style.backgroundColor = '#f4b942'
+	unanswered.forEach(function(item){
+		(function(element){
+			var parentEl = element.parentElement
+			if (parentEl.className.indexOf('question') !== -1) {
+				highlightQuestion(parentEl)
+			} else {
+				arguments.callee(parentEl)
+			}
+		})(item)
+
+	})
+}
+
+function highlightQuestion (question) {
+	question.style.boxShadow = '5px 1px 4px 1px #f4b942';
+	question.style.margin = '1em 0 1em 0'
+}
+
+function clearHighlightedQuestions () {
+	Array.prototype.forEach.call(document.querySelectorAll('.question'), function(question){
+		question.style.boxShadow = 'none'
+		question.style.margin = 0
+	})
+	document.querySelector('#pageFrontBanner p').innerHTML = 'Club Finder - Night Club Form'
+	document.querySelector('#pageFrontBanner').style.backgroundColor = '#7fd648'
 }
