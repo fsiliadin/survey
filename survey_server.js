@@ -8,21 +8,35 @@ var options = {
 }
 
 https.createServer(options, function(request, response) {
-	request.url += request.url === '/' ? 'index.html' : ''
-	
-	if (isAuthorized(request.url)) {		
-		fs.readFile('.'+request.url, function(err, file) {
-			response.writeHead(200, {
-				'Content-Type': getType(request.url)
-	      	})
-			response.end(file)
-		})
+	if (request.method === 'POST') {
+		var data = '';
+		request.on('data', function (chunk) {
+			data += chunk;
+		});
+		request.on('end', function () {
+			data = JSON.parse(data)
+			console.log('DATA', data)
+			// save data in DB
+			response.end('thanks')
+		});
 	} else {
-		console.log('UNAUTHORIZED REQUEST')
-		response.writeHead(404, {
-      	})
-      	response.end('Page not found')
+		request.url += request.url === '/' ? 'index.html' : ''
+		
+		if (isAuthorized(request.url)) {		
+			fs.readFile('.'+request.url, function(err, file) {
+				response.writeHead(200, {
+					'Content-Type': getType(request.url)
+		      	})
+				response.end(file)
+			})
+		} else {
+			console.log('UNAUTHORIZED REQUEST')
+			response.writeHead(404, {
+	      	})
+	      	response.end('Page not found')
+		}
 	}
+	
 	
 	
 	
