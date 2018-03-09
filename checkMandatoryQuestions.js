@@ -112,5 +112,16 @@ function createDataObject () {
 	clubData.shortDescription = document.querySelector('#description').value
 	clubData.djRate = djRate.generated()[0].rate
 
-	console.log('club Data', clubData)
+	console.log('club Data', JSON.stringify(clubData))
+
+	var req = new XMLHttpRequest();
+
+    req.onreadystatechange = function(event) {
+        if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+            alert('done');                 
+        }
+    };
+    // req.open('POST', 'https://192.168.43.138:8085', true);
+    req.open('POST', 'https://192.168.1.141:8086', true);
+    req.send(JSON.stringify(clubData));
 }
