@@ -121,7 +121,7 @@ function createDataObject () {
             alert('done');                 
         }
     };
-    // req.open('POST', 'https://192.168.43.138:8085', true);
-    req.open('POST', 'https://192.168.1.141:8086', true);
+    req.open('POST', 'https://192.168.43.138:8086', true);
+    // req.open('POST', 'https://192.168.1.141:8086', true);
     req.send(JSON.stringify(clubData));
 }

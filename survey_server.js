@@ -15,7 +15,20 @@ https.createServer(options, function(request, response) {
 		});
 		request.on('end', function () {
 			data = JSON.parse(data)
-			console.log('DATA', data)
+			var content;
+			fs.readFile('surveyResponses.json', function(err, file) {
+				responses = JSON.parse(file.toString())
+				responses.push(data)
+				content = JSON.stringify(responses)
+				fs.writeFile('surveyResponses.json', content, function(err) {
+					if(err){
+						console.log('an error occured')
+					} else {
+						console.log('DATA UPDATED')
+					}
+				})
+			})
+			
 			// save data in DB
 			response.end('thanks')
 		});
