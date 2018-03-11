@@ -45,7 +45,7 @@ function checkMandatoryQuestions() {
 
 	if (unanswered.length) {
 		unanswered[0].scrollIntoView({behavior: 'smooth', block: 'center', inline: 'nearest'});
-		document.querySelector('#pageFrontBanner p').innerHTML = 'Club Finder - Sombre!! vous n\'avez pas repondu à toutes les questions'
+		document.querySelector('#pageFrontBanner p').innerHTML = 'Club Finder - Il manque quelques petites réponses'
 		document.querySelector('#pageFrontBanner').style.backgroundColor = '#f4b942'
 		unanswered.forEach(function(item) {
 			(function(element){
@@ -118,7 +118,15 @@ function createDataObject () {
 
     req.onreadystatechange = function(event) {
         if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
-            alert('done');                 
+        	window.setTimeout(function(){
+        		document.querySelector('#pageFrontBanner').style.backgroundColor = 'black'
+        		document.querySelector('#submit').style.backgroundColor = 'black'
+        		window.setTimeout(function(){
+	        		document.querySelector('#pageFrontBanner').style.backgroundColor = '#7fd648'
+        			document.querySelector('#submit').style.backgroundColor = '#7fd648'
+        			document.querySelector('#pageFrontBanner p').innerHTML = 'Club Finder - Nous avons bien reçu vos données, merci beaucoup :)'  
+	        	}, 1000)
+        	}, 1000)            
         }
     };
     req.open('POST', 'https://192.168.43.138:8086', true);

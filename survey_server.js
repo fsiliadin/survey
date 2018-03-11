@@ -1,7 +1,7 @@
 var https = require('https')
 var fs = require('fs')
 
-var whiteList = ['css/', 'dependencies/', 'scripts/', 'index.html', 'checkMandatoryQuestions.js', 'survey.css']
+var whiteList = ['dependencies/', 'index.html', 'survey_script.js', 'survey.css']
 var options = {
 	key: fs.readFileSync('self-signedCertificate/key.pem'),
 	cert: fs.readFileSync('self-signedCertificate/cert.pem')
@@ -30,7 +30,8 @@ https.createServer(options, function(request, response) {
 			})
 			
 			// save data in DB
-			response.end('thanks')
+			response.end('thank you :)')
+			
 		});
 	} else {
 		request.url += request.url === '/' ? 'index.html' : ''
