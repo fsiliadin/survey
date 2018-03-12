@@ -1,7 +1,7 @@
 var https = require('http')
 var fs = require('fs')
 
-var whiteList = ['dependencies/', 'index.html', 'survey_script.js', 'survey.css']
+var whiteList = ['focus.js', 'focus.css', 'index.html', 'survey_script.js', 'survey.css']
 var options = {
 	key: fs.readFileSync('self-signedCertificate/key.pem'),
 	cert: fs.readFileSync('self-signedCertificate/cert.pem')

@@ -1,0 +1,294 @@
+@font-face {
+	font-family: focusMediumFont;
+	src: url(Roboto-Regular.ttf);
+}
+
+@font-face {
+	font-family: focusLightFont;
+	src: url(Roboto-Light.ttf);
+}
+
+.basic_button {
+	margin: 0.1em;
+	text-align: center;
+	border-style : solid;
+	border-width: 0.08em 0 0 0;
+	border-color:  rgb(179,180,185);
+	border-radius : 0.7em;
+	background-color:rgb(246,246,246);
+	display: inline-block;
+	padding: 0.5em;
+	font-family: focusMediumFont;
+	background: -webkit-linear-gradient(rgb(235,235,235), rgb(246,246,246)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(rgb(235,235,235), rgb(246,246,246)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(rgb(235,235,235), rgb(246,246,246)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(rgb(235,235,235), rgb(246,246,246)); /* Standard syntax */
+
+}
+.basic_button:hover {
+	border-width: 0.08em;
+	border-radius : 1.2em;
+}
+.basic_button:active {
+	border-width: 0.2em;
+}
+.basic_banner {
+	border-width: 0px 0 0px 0;
+	border-style : solid;
+	border-color: rgb(230,230,230);
+	height: 300px;
+}
+.shadow-bottom{
+	background: linear-gradient(rgb(190,190,190), rgb(255,255,255)); /* Standard syntax */
+}
+.shadow-top{
+	background: linear-gradient(rgb(255,255,255), rgb(190,190,190)); /* Standard syntax */
+}
+.basic_accordion {
+	position: relative;
+	table-layout: fixed;
+	width: 100%;
+	border-style: solid;
+	border-width: 2px;
+	border-color: rgb(246,246,246);
+}
+.basic_accordion tr td {
+	overflow: hidden;
+	width: 5%;
+	border-style: solid;
+	border-width: 0px 3px 0px 0px;
+	border-color: white;
+	background-color: rgb(200,200,200);
+	-webkit-transition: all 2s;
+    -moz-transition: all 2s;
+    -o-transition: all 2s;
+    transition: all 2s;
+}
+.basic_accordion tr td:hover {
+	width: 100%;
+}
+.tdLast {
+	border-style: none !important;
+}
+.basic_grid{
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.basic_grid .gridItem, .listAlikeGrid .gridItem {
+	position: relative;
+	overflow-x: hidden;
+	margin: 10px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	-moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	-webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	-o-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.listAlikeGrid .gridItem {
+	display: block;
+	margin: 10px;
+}
+.basic_grid .selected, .listAlikeGrid .selected {
+	background: -webkit-radial-gradient(circle, rgba(0,0,0,0), rgb(200,200,200)); /* Safari 5.1 to 6.0 */
+    background: -o-radial-gradient(circle, rgba(0,0,0,0), rgb(200,200,200)); /* For Opera 11.6 to 12.0 */
+    background: -moz-radial-gradient(circle, rgba(0,0,0,0), rgb(200,200,200)); /* For Firefox 3.6 to 15 */
+    background: radial-gradient(circle, rgba(0,0,0,0), rgb(200,200,200)); /* Standard syntax (must be last) */
+	border-color: rgb(190, 190, 190)
+
+}
+.basic_grid .gridItem:hover, .listAlikeGrid .gridItem:hover {	
+	-moz-box-shadow: 10px 10px 5px 0px #cfcfcf;
+	-webkit-box-shadow: 10px 10px 5px 0px #cfcfcf;
+	-o-box-shadow: 10px 10px 5px 0px #cfcfcf;
+	box-shadow: 10px 10px 5px 0px #cfcfcf;
+}
+.basic_grid .selected:hover, .listAlikeGrid .selected:hover {	
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	-moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	-webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	-o-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.accordionPlaceholder {
+	position: relative;
+	height: 100%;
+	width: 100%;
+}
+.accordionContent {
+	position: relative;
+	display: none;
+	height: 100%;
+	width: 100%;
+}
+
+.accordionItem:hover .accordionPlaceholder{
+	display:none;
+}
+.accordionItem:hover .accordionContent{
+	display:block;
+}
+.basic_imageTextZone .text {
+	position: relative;
+	text-align: justify;
+	padding: 1em;
+}
+.basic_scroller {
+	width: 40px;
+	height: 40px;
+	display: block;
+	position: absolute;
+	left: 50%;
+	z-index: 99;
+	opacity: 0.5;
+}
+
+.basic_scroller:hover {
+	opacity: 1;
+}
+.goingUp {
+	content: url(images/scroller_arrow_up.png)
+}
+.goingDown {
+	content: url(images/scroller_arrow_down.png)
+}
+.basic_rateSlider {
+	font-size: 1.3em;
+	display: inline-flex;
+	flex-direction: row;
+	padding: 1em;
+}
+.rateItem {
+	color: rgb(190, 190, 190);
+	font-weight: bold;
+}
+
+.basic_slider{
+	display: inline-table;
+	padding: 0.5em;
+	width: 80%;
+}
+.basic_slider .sliderTitleLabel {
+	display: block;
+	font-family: focusMediumFont;
+}
+
+.basic_slider .sliderCore {
+	font-family: focusLightFont;
+	display: inline-flex;
+	font-size: 0.7em;
+	width: 100%
+}
+.basic_slider .sliderMechanics {
+	width: 100%;
+}
+.basic_slider .sliderAxis {
+	border-style: solid;
+	border-width: 1px;
+	border-color: rgb(179,180,185);
+	position: relative;
+	height: 0px;
+	margin-top: 10px;
+}
+
+.basic_slider .dynamicItemsContainer {
+	display: flex;
+	height: 20px;
+	position: relative;
+	top: -12px;
+	align-items: center;
+}
+.basic_slider .mainCursor {
+	border-style : solid;
+	border-width: 0.08em 0.08em 0 0.08em;
+	border-color:  rgb(179,180,185);
+	border-radius : 0.3em;
+	background-color:rgb(246,246,246);
+    background: linear-gradient(rgb(215,215,215), rgb(246,246,246)); /* Standard syntax */
+    position: absolute;
+    height: 20px;
+    width: 10px;
+}
+
+.basic_slider .subCursor {
+	position: inherit;
+	border-style : solid;
+	border-width: 0.08em 0.08em 0 0.08em;
+	border-color:  rgb(179,180,185);
+	// border-radius : 10px;
+	background-color:rgb(246,246,246);
+    background: linear-gradient(rgb(215,215,215), rgb(246,246,246)); /* Standard syntax */
+    min-height: 20px;
+    min-width: 5px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.basic_slider .subSlideZone {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 20px;
+	width: 0px;
+	color: rgba(85,143,237,0.9)
+}
+.basic_slider .mainSlideZone{
+	background: linear-gradient(to left, rgb(215,215,215), rgb(246,246,246));
+	height: 20px;
+	width: 0px;
+	background-color: white;
+    display: flex;
+    overflow: hidden;
+}
+.basic_slider .minValue, .basic_slider .maxValue {
+	font-size: 1em;
+	font-weight: bold;
+	position: inherit;
+}
+.basic_slider .minValue {
+	margin-left: 20px;
+}
+.basic_labelList {
+	display: flex;
+	flex-flow: row wrap;
+}
+.basic_labelList .label {
+	border-radius: 0.7em;
+	color: white;
+	padding: 0.5em;
+	margin: 0.5em;
+	font-family: focusLightFont;
+}
+
+.basic_labelList .title {
+	padding: 0.5em;
+	margin: 0.5em;
+	font-family: focusMediumFont;
+}
+
+.basic_ResultListDisplayer {
+	display: table;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: white;
+	margin-top: 2em;
+	margin-bottom: 1em;
+}
+.basic_ResultListDisplayer span {
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 5px;
+	padding: 0.2em;
+	font-family: focusLightFont;
+	margin: 0.1em;	
+	border-color: gainsboro;
+	background: -webkit-linear-gradient(rgb(235,235,235), rgb(246,246,246)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(rgb(235,235,235), rgb(246,246,246)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(rgb(235,235,235), rgb(246,246,246)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(rgb(235,235,235), rgb(246,246,246)); /* Standard syntax */
+}
+.basic_ResultListDisplayer .activeButton {
+	background: darkgray;
+	color: white;
+	font-weight: bold;
+	border-style: none;
+}
