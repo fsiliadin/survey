@@ -54,7 +54,7 @@ https.createServer(options, function(request, response) {
 	
 	
 	
-}).listen(process.env.PORT || 8086)
+}).listen(process.env.PORT)
 
 function getType (url) {
 	return 'text/'+url.split('.').pop()
@@ -66,4 +66,4 @@ function isAuthorized (url) {
 	})
 }
 
-console.log('ui server running at 127.0.0.1:' + (process.env.PORT || 8086))
+console.log('ui server running at 127.0.0.1:' + (process.env.PORT))
