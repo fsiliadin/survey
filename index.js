@@ -2,10 +2,6 @@ var https = require('http')
 var fs = require('fs')
 
 var whiteList = ['focus.js', 'focus.css', 'index.html', 'survey_script.js', 'survey.css']
-var options = {
-	key: fs.readFileSync('self-signedCertificate/key.pem'),
-	cert: fs.readFileSync('self-signedCertificate/cert.pem')
-}
 
 https.createServer(function(request, response) {
 	console.log('METHOD', request.method)
