@@ -129,7 +129,7 @@ function createDataObject () {
         	}, 1000)            
         }
     };
-    req.open('POST', 'https://192.168.43.138:8086', true);
-    // req.open('POST', 'https://192.168.1.141:8086', true);
+    req.open('POST', 'http://www.clubfinderform.pw:8080', true);
+    // req.open('POST', 'https://www.clubfinderform.pw:8080', true);
     req.send(JSON.stringify(clubData));
 }
