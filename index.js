@@ -8,6 +8,7 @@ var options = {
 }
 
 https.createServer(function(request, response) {
+	console.log('METHOD', request.method)
 	if (request.method === 'POST') {
 		var data = '';
 		request.on('data', function (chunk) {
@@ -20,6 +21,7 @@ https.createServer(function(request, response) {
 				responses = JSON.parse(file.toString())
 				responses.push(data)
 				content = JSON.stringify(responses)
+				console.log('CONTENT', content)
 				fs.writeFile('surveyResponses.json', content, function(err) {
 					if(err){
 						console.log('an error occured')
