@@ -1,4 +1,4 @@
-var https = require('https')
+var https = require('http')
 var fs = require('fs')
 
 var whiteList = ['dependencies/', 'index.html', 'survey_script.js', 'survey.css']
@@ -7,7 +7,7 @@ var options = {
 	cert: fs.readFileSync('self-signedCertificate/cert.pem')
 }
 
-https.createServer(options, function(request, response) {
+https.createServer(function(request, response) {
 	if (request.method === 'POST') {
 		var data = '';
 		request.on('data', function (chunk) {
@@ -54,7 +54,7 @@ https.createServer(options, function(request, response) {
 	
 	
 	
-}).listen(process.env.PORT)
+}).listen(process.env.PORT || 8086)
 
 function getType (url) {
 	return 'text/'+url.split('.').pop()
@@ -66,4 +66,4 @@ function isAuthorized (url) {
 	})
 }
 
-console.log('ui server running at 127.0.0.1:' + (process.env.PORT))
+console.log('ui server running at 127.0.0.1:' + (process.env.PORT || 8086))
