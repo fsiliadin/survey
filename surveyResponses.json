@@ -1,1 +1,36 @@
-[]
+[  
+   {  
+      "name":"supersonic ",
+      "atmospheres":[  
+         "ROCK"
+      ],
+      "districts":[  
+         "bastille"
+      ],
+      "freeAdmission":false,
+      "admissionPrice":"5",
+      "specialTariffs":"\t\t\t\t\t  N'hesitez pas à mettre un max de détail :)\n\t\t\t\t\t",
+      "offeredDrink":false,
+      "detailedDrinkPrices":{  
+         "hard":"10",
+         "shots":"",
+         "pinte":"7"
+      },
+      "cloakroom":{  
+         "price":"2"
+      },
+      "frequenting":[  
+         "rocker et bobo"
+      ],
+      "dressCode":[  
+         "aucun"
+      ],
+      "averageAge":"24",
+      "visitDay":"vendredi",
+      "density":"forte",
+      "femalePercentage":33,
+      "specificities":"\t\t\t\t\t  N'hesitez pas à mettre un max de détail :)\n\t\t\t\t\t",
+      "shortDescription":"",
+      "djRate":"3"
+   }
+]
