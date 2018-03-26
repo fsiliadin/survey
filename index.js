@@ -2,11 +2,10 @@ var https = require('http')
 var fs = require('fs')
 
 var whiteList = ['focus.js', 'focus.css', 'index.html', 'survey_script.js', 'survey.css']
-var domainWhiteList = ['http://clubfinderform.pw', 'https://clubfinderform.pw', 'http://www.clubfinderform.pw', 'https://www.clubfinderform.pw']
 
 https.createServer(function(request, response) {
 	console.log('METHOD', request.method)
-	response.setHeader('Access-Control-Allow-Origin', domainWhiteList)
+	response.setHeader('Access-Control-Allow-Origin', 'https://clubfinderform.pw')
 	if (request.method === 'POST') {
 		var data = '';
 		request.on('data', function (chunk) {
