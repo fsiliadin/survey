@@ -101,9 +101,6 @@ function createDataObject () {
 	clubData.dressCode = document.querySelector('#dressCodeInput').value.split(',')
 	clubData.averageAge = document.querySelector('#averageAgeInput').value
 	clubData.visitDay = document.querySelector('#visiteDay select').value
-	console.log('djfqkldsjf', Array.prototype.filter.call(document.querySelectorAll('#densityRadio input'), function(option) {
-		return option.checked
-	})[0])
 	clubData.density = Array.prototype.filter.call(document.querySelectorAll('#densityRadio input'), function(option) {
 		return option.checked
 	})[0].value
@@ -111,6 +108,7 @@ function createDataObject () {
 	clubData.specificities = document.querySelector('#clubSpecificities').value
 	clubData.shortDescription = document.querySelector('#description').value
 	clubData.djRate = djRate.generated()[0].rate
+	clubData.responseOn = new Date()
 
 	console.log('club Data', JSON.stringify(clubData))
 
@@ -129,7 +127,7 @@ function createDataObject () {
         	}, 1000)            
         }
     };
-    req.open('POST', 'http://www.clubfinderform.pw', true);
+    req.open('POST', 'https://www.clubfinderform.pw', true);
     // req.open('POST', 'https://www.clubfinderform.pw', true);
     req.send(JSON.stringify(clubData));
 }
