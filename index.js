@@ -5,7 +5,7 @@ var whiteList = ['focus.js', 'focus.css', 'index.html', 'survey_script.js', 'sur
 
 https.createServer(function(request, response) {
 	console.log('METHOD', request.method)
-	response.setHeader('Access-Control-Allow-Origin', 'https://clubfinderform.pw')
+	response.setHeader('Access-Control-Allow-Origin', '*')
 	if (request.method === 'POST') {
 		var data = '';
 		request.on('data', function (chunk) {
