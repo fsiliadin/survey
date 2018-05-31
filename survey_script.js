@@ -73,7 +73,7 @@ function clearHighlightedQuestions () {
 		question.style.boxShadow = 'none'
 		question.style.margin = 0
 	})
-	document.querySelector('#pageFrontBanner p').innerHTML = 'Club Finder - Night Club Form'
+	document.querySelector('#pageFrontBanner p').innerHTML = 'Club Finder - Formulaire'
 	document.querySelector('#pageFrontBanner').style.backgroundColor = '#7fd648'
 }
 
@@ -121,7 +121,7 @@ function createDataObject () {
         		window.setTimeout(function(){
 	        		document.querySelector('#pageFrontBanner').style.backgroundColor = '#7fd648'
         			document.querySelector('#submit').style.backgroundColor = '#7fd648'
-        			document.querySelector('#pageFrontBanner p').innerHTML = 'Club Finder - Nous avons bien reçu vos données, merci beaucoup :)'  
+        			document.querySelector('#pageFrontBanner p').innerHTML = 'Club Finder - Nous avons bien reçu vos données, merci :)'  
 	        	}, 1000)
         	}, 1000)            
         }
