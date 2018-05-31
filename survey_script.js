@@ -44,7 +44,7 @@ function checkMandatoryQuestions() {
 
 	if (unanswered.length) {
 		unanswered[0].scrollIntoView({behavior: 'smooth', block: 'center', inline: 'nearest'});
-		document.querySelector('#pageFrontBanner p').innerHTML = 'Club Finder - Il manque quelques petites réponses'
+		document.querySelector('#pageFrontBanner p').innerHTML = 'Club Finder - Certaines réponses sont manquantes'
 		document.querySelector('#pageFrontBanner').style.backgroundColor = '#f4b942'
 		unanswered.forEach(function(item) {
 			(function(element){
@@ -73,7 +73,7 @@ function clearHighlightedQuestions () {
 		question.style.boxShadow = 'none'
 		question.style.margin = 0
 	})
-	document.querySelector('#pageFrontBanner p').innerHTML = 'Club Finder - Night Club Form'
+	document.querySelector('#pageFrontBanner p').innerHTML = 'Club Finder - Formulaire d\'établissement'
 	document.querySelector('#pageFrontBanner').style.backgroundColor = '#7fd648'
 }
 
@@ -115,7 +115,7 @@ function createDataObject () {
         		window.setTimeout(function(){
 	        		document.querySelector('#pageFrontBanner').style.backgroundColor = '#7fd648'
         			document.querySelector('#submit').style.backgroundColor = '#7fd648'
-        			document.querySelector('#pageFrontBanner p').innerHTML = 'Club Finder - Nous avons bien reçu vos données, merci beaucoup :)'  
+        			document.querySelector('#pageFrontBanner p').innerHTML = 'Club Finder - Nous avons bien reçu vos données, merci pour votre contribution'  
 	        	}, 1000)
         	}, 1000)            
         }

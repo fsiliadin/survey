@@ -9,7 +9,7 @@
 	top: 0px;
 	background-color: #7fd648;
     color: white;
-	font-family: 'Courgette', cursive;
+	font-family: 'Kalam', cursive;
 	font-size: large;
     font-weight: bold;
     z-index: 1000;
@@ -18,7 +18,7 @@
 	margin-left: 1em;
 }
 #formBody {
-	font-family: 'Hind Siliguri', sans-serif;
+	font-family: 'Nanum Gothic', sans-serif;
 	color: #787878;
 	padding: 1em;
 	display: flex;
@@ -79,7 +79,7 @@ div[data-role=page]{
 	background-color: #7fd648;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 769px) {
 	.question span {
 		font-size: x-small !important;
 	}
@@ -88,5 +88,8 @@ div[data-role=page]{
 	}
 	.ui-btn.ui-checkbox-off:after, .ui-btn.ui-checkbox-on:after, .ui-btn.ui-radio-off:after, .ui-btn.ui-radio-on:after {
 	    margin: -9px 2px 0 -4px !important;
+	}
+	#formBody {
+		width: 100%;
 	}
 }
