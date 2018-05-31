@@ -1,6 +1,5 @@
 window.onload = function(){
 	var submitButton = document.querySelector('#submit')
-	console.debug('dkjfqmd', submitButton)
 	submitButton.addEventListener('click', checkMandatoryQuestions)
 }
 
@@ -105,7 +104,7 @@ function createDataObject () {
 		return option.checked
 	})[0].value
 	clubData.femalePercentage = femalePercentage.generated()[0].value
-	clubData.specificities = document.querySelector('#clubSpecificities').value
+	clubData.specificities = document.querySelector('#clubSpecificities').value + (document.querySelector('#terrace').checked ? ' terrasse' : '')
 	clubData.shortDescription = document.querySelector('#description').value
 	clubData.djRate = djRate.generated()[0].rate
 	clubData.responseOn = new Date()
