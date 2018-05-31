@@ -100,13 +100,7 @@ function createDataObject () {
 	clubData.dressCode = document.querySelector('#dressCodeInput').value.split(',')
 	clubData.averageAge = document.querySelector('#averageAgeInput').value
 	clubData.visitDay = document.querySelector('#visiteDay select').value
-	clubData.density = Array.prototype.filter.call(document.querySelectorAll('#densityRadio input'), function(option) {
-		return option.checked
-	})[0].value
-	clubData.femalePercentage = femalePercentage.generated()[0].value
 	clubData.specificities = document.querySelector('#clubSpecificities').value + (document.querySelector('#terrace').checked ? ' terrasse' : '')
-	clubData.shortDescription = document.querySelector('#description').value
-	clubData.djRate = djRate.generated()[0].rate
 	clubData.responseOn = new Date()
 
 	console.log('club Data', JSON.stringify(clubData))

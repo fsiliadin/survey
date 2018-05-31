@@ -153,7 +153,7 @@
 				<span><input type="number" id="averageAgeInput" data-mandatory = 'true'></span>
 			</div>
 			<div class= 'question'>
-				<span> jour de la visite * :</span>
+				<span> jour * :</span>
 				<span>
 					<form id="visiteDay" data-mandatory = 'true'>
 						<select name = "jour de visite">
@@ -170,59 +170,11 @@
 				</span>
 			</div>
 			<div class= 'question'>
-				<span> densité * :</span>
-				<span>
-					<form id = "densityRadio" data-mandatory = 'true'>
-						<input type="radio" id="faible" value="faible" name="density">
-						<label for="faible">faible</label>
-						<input type="radio" id="moyenne" value="moyenne" name="density">
-						<label for="moyenne">moyen</label>
-						<input type="radio" id="forte" value="forte" name="density">
-						<label for="forte">forte</label>
-					</form>
-				</span>
-			</div>
-			<div class= 'question'>
-				<span> pourcentage de femmes :</span>
-				<span id="femalePercentage"> 
-					<script>
-						femalePercentage = new Slider ('#femalePercentage', {
-					        id: 'nbOfPerson',
-					        min: 0,
-					        max: 100,
-					        value: 50
-					    });
-					</script>
-				</span>
-			</div>
-			<div class= 'question'>
 				<span> spécificités du lieu (sur une péniche, belle vue sur la Tour Eiffel etc..): </span>
 				<span>
 					<textarea id = "clubSpecificities" name="clubSpecificities">
 					  N'hesitez pas à mettre un max de détail :)
 					</textarea>
-				</span>
-			</div>
-			<div class= 'question'>
-				<span> petite description: </span>
-				<span>
-					<textarea id = "description" name="description">
-					  N'hesitez pas à mettre un max de détail :)
-					</textarea>
-				</span>
-			</div>
-			<div class= 'question'>
-				<span> note du dj * :</span>
-				<span id= "djRate">
-					<script>
-						djRate = new RateSlider('#djRate', {
-					        maxRate: 5,
-					        pattern: "&#9733",
-					        activeColor: "#7fd648"
-					    })
-					    djRate.generated()[0].element.dataset.mandatory = 'true'
-					    console.log(djRate.generated());
-					</script> 
 				</span>
 			</div>
 		</div>
