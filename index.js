@@ -1,7 +1,7 @@
 var https = require('http')
 var fs = require('fs')
 
-var whiteList = ['focus.js', 'focus.css', 'index.html', 'survey_script.js', 'survey.css']
+var whiteList = ['focus.js', 'focus.css', 'index.html', 'survey_script.js', 'survey.css', 'Roboto-Regular.ttf', 'Roboto-Light.ttf']
 
 https.createServer(function(request, response) {
 	console.log('METHOD', request.method)
