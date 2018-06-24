@@ -99,7 +99,12 @@ function createDataObject () {
 	clubData.frequenting = document.querySelector('#frequentationInput').value.split(',')
 	clubData.dressCode = document.querySelector('#dressCodeInput').value.split(',')
 	clubData.averageAge = document.querySelector('#averageAgeInput').value
-	clubData.visitDay = document.querySelector('#visiteDay select').value
+	clubData.visitDay = {
+		day: document.querySelector('#visiteDay select').value,
+		open: document.querySelector('#openingHour').value,
+		close: document.querySelector('#closingHour').value
+	}
+
 	clubData.specificities = document.querySelector('#clubSpecificities').value + (document.querySelector('#terrace').checked ? ' terrasse' : '')
 	clubData.responseOn = new Date()
 

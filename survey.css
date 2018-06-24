@@ -78,7 +78,10 @@ div[data-role=page]{
 	color: white;
 	background-color: #7fd648;
 }
-
+#horaires {
+	display: inline-flex;
+	justify-content: space-between;
+}
 @media (max-width: 769px) {
 	.question span {
 		font-size: x-small !important;
